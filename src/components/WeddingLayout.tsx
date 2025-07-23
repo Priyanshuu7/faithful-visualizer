@@ -6,6 +6,15 @@ import weddingCeremony from "@/assets/wedding-ceremony.jpg";
 import coupleCandid from "@/assets/couple-candid.jpg";
 import weddingDetails from "@/assets/wedding-details.jpg";
 import destinationWedding from "@/assets/destination-wedding.jpg";
+import brideTraditional from "@/assets/bride-traditional.jpg";
+import coupleWalking from "@/assets/couple-walking.jpg";
+import groomPortrait from "@/assets/groom-portrait.jpg";
+import weddingDance from "@/assets/wedding-dance.jpg";
+import mehendiHands from "@/assets/mehendi-hands.jpg";
+import bridePrep from "@/assets/bride-prep.jpg";
+import mandapCeremony from "@/assets/mandap-ceremony.jpg";
+import familyPhoto from "@/assets/family-photo.jpg";
+import garlandExchange from "@/assets/garland-exchange.jpg";
 
 const WeddingLayout = () => {
   return (
@@ -65,62 +74,83 @@ const WeddingLayout = () => {
           </div>
         </div>
 
-        {/* Iconic Wedding Images Collage */}
+        {/* Iconic Wedding Images Collage - 15 Images */}
         <div className="mb-16">
-          <div className="grid grid-cols-12 grid-rows-6 gap-2 md:gap-4 h-[80vh] relative">
-            {/* Top Row Images */}
-            <div className="col-span-3 row-span-2 overflow-hidden">
+          <div className="grid grid-cols-5 gap-2 md:gap-4 h-[80vh]">
+            {/* Row 1 */}
+            <div className="aspect-square overflow-hidden">
               <img 
                 src={destinationWedding} 
                 alt="Destination wedding" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
-            <div className="col-span-3 row-span-2 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
               <img 
                 src={brideElegant} 
                 alt="Elegant bride" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
-            <div className="col-span-3 row-span-2 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
               <img 
                 src={weddingCouple1} 
                 alt="Wedding couple" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
-            <div className="col-span-3 row-span-2 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
               <img 
                 src={coupleCandid} 
                 alt="Candid couple moment" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
+            <div className="aspect-square overflow-hidden">
+              <img 
+                src={brideTraditional} 
+                alt="Traditional bride" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
 
-            {/* Middle Section with Text Overlay */}
-            <div className="col-span-3 row-span-2 overflow-hidden">
+            {/* Row 2 */}
+            <div className="aspect-square overflow-hidden">
               <img 
                 src={weddingDetails} 
                 alt="Wedding details" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
+            <div className="aspect-square overflow-hidden">
+              <img 
+                src={coupleWalking} 
+                alt="Couple walking" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
             
             {/* Central Text */}
-            <div className="col-span-6 row-span-2 bg-background flex flex-col justify-center items-center text-center px-4">
-              <p className="font-inter text-sm md:text-base tracking-wider text-foreground/70 mb-2">
+            <div className="aspect-square bg-background flex flex-col justify-center items-center text-center px-2">
+              <p className="font-inter text-xs md:text-sm tracking-wider text-foreground/70 mb-1">
                 some of the most
               </p>
-              <h3 className="font-playfair text-3xl md:text-5xl lg:text-6xl font-light italic tracking-wide">
+              <h3 className="font-playfair text-2xl md:text-4xl lg:text-5xl font-light italic tracking-wide">
                 "ICONIC"
               </h3>
-              <p className="font-inter text-sm md:text-base tracking-wider text-foreground/70 mt-2">
+              <p className="font-inter text-xs md:text-sm tracking-wider text-foreground/70 mt-1">
                 wedding images
               </p>
             </div>
 
-            <div className="col-span-3 row-span-2 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
+              <img 
+                src={groomPortrait} 
+                alt="Groom portrait" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden">
               <img 
                 src={weddingCeremony} 
                 alt="Wedding ceremony" 
@@ -128,25 +158,39 @@ const WeddingLayout = () => {
               />
             </div>
 
-            {/* Bottom Row Images */}
-            <div className="col-span-4 row-span-2 overflow-hidden">
+            {/* Row 3 */}
+            <div className="aspect-square overflow-hidden">
               <img 
-                src={bridePortrait} 
-                alt="Bride portrait" 
+                src={weddingDance} 
+                alt="Wedding dance" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
-            <div className="col-span-4 row-span-2 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
               <img 
-                src={destinationWedding} 
-                alt="Destination wedding scene" 
+                src={mehendiHands} 
+                alt="Mehendi hands" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
-            <div className="col-span-4 row-span-2 overflow-hidden">
+            <div className="aspect-square overflow-hidden">
               <img 
-                src={weddingScene} 
-                alt="Wedding scene" 
+                src={bridePrep} 
+                alt="Bride preparation" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden">
+              <img 
+                src={mandapCeremony} 
+                alt="Mandap ceremony" 
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden">
+              <img 
+                src={familyPhoto} 
+                alt="Family photo" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>

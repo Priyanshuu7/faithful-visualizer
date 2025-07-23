@@ -75,7 +75,7 @@ const WeddingLayout = () => {
         </div>
 
         {/* Iconic Wedding Images Collage - 15 Images */}
-        <div className="mb-16 -mx-4 md:-mx-8">
+        <div className="mb-16 px-2">
           <div className="grid grid-cols-5 gap-1 md:gap-2 h-[80vh]">
             {/* Row 1 */}
             <div className="aspect-square overflow-hidden">

@@ -1,7 +1,11 @@
 import WeddingLayout from "@/components/WeddingLayout";
 
 const Index = () => {
-  return <WeddingLayout />;
+  return (
+    <>
+      <WeddingLayout />
+    </>
+  );
 };
 
 export default Index;

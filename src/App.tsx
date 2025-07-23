@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Footer from "@/components/Footer";
 
+
 const queryClient = new QueryClient();
 
 function Layout() {

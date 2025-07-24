@@ -21,8 +21,7 @@ const WeddingLayout = () => {
                 {/* Main Header Overlapping Images */}
                 <div
                     className="absolute top-[-160px] left-0 w-full z-20 flex flex-col items-center pointer-events-none">
-                    {/* Main title lines are now conditionally absolute positioned for laptop */}
-                    {/* A MODERN APPROACH */}
+                    {/* Main title lines */}
                     <div
                         className="font-playfair text-3xl md:text-7xl lg:text-6xl font-light tracking-wide leading-tight text-center
                         lg:absolute lg:top-0 lg:left-[5%] lg:text-left">
@@ -30,10 +29,13 @@ const WeddingLayout = () => {
                     </div>
                     {/* to an AGE OLD TRADITION */}
                     <div
-                        className="flex flex-row items-baseline gap-4 justify-center
-                        lg:absolute lg:top-[70px] lg:left-[5%] lg:justify-start">
+                        className="
+                          flex flex-col items-center gap-0 justify-center
+                          md:flex-row md:items-baseline md:gap-4 md:justify-center
+                          lg:absolute lg:top-[70px] lg:left-[5%] lg:justify-start
+                        ">
                         <span
-                            className="font-playfair text-xl md:text-3xl lg:text-4xl font-light italic mt-2 mb-4">to an</span>
+                            className="font-playfair text-xl md:text-3xl lg:text-4xl font-light italic mt-2 mb-0 md:mb-4">to an</span>
                         <span
                             className="font-playfair text-3xl md:text-7xl lg:text-6xl font-light tracking-wide">AGE OLD TRADITION</span>
                     </div>

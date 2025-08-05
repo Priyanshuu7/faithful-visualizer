@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import TermsConditions from "./pages/TermsConditions";
 import Footer from "@/components/Footer";
 
 
@@ -34,6 +35,7 @@ const App = () => (
                         <Route path="/" element={< Index />}/>
                         <Route path="/contact" element={< Contact />}/>
                         <Route path="/about" element={< About />}/> {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                        <Route path="/terms-conditions" element={< TermsConditions />}/>
                         <Route path="*" element={< NotFound />}/>
                     </Route>
                 </Routes>

@@ -34,7 +34,7 @@ const Footer : React.FC = () => {
                             aria-label="Facebook">
                             <Youtube className="h-5 w-5 hover:text-blue-600 transition-colors"/>
                         </a>
-
+                        <a href="/terms-conditions" className="hover:underline">Terms & Conditions</a>
                     </div>
                     <p className="text-sm text-zinc-600">Jaipur</p>
                     <p className="text-sm text-zinc-600">Privacy Policy</p>

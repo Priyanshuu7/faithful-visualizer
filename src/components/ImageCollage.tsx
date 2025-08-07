@@ -16,7 +16,7 @@ import familyPhoto from "@/assets/family-photo.jpg";
 
 const ImageCollage = () => {
   return (
-    <div className="mb-4 w-full md:w-screen md:relative md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw]">
+    <div id="work" className="mb-4 w-full md:w-screen md:relative md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw]">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-0 md:gap-0">
         <div className="aspect-square overflow-hidden">
           <img src={destinationWedding} alt="Destination wedding" className="w-full h-full object-cover" loading="lazy" />

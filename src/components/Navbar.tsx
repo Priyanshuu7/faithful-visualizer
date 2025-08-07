@@ -29,8 +29,8 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop NavLinks */}
-        <div className="hidden md:flex items-center gap-4">
-          <NavLink to="/">Home</NavLink>
+        <div className="font-saonara hidden md:flex items-center gap-4">
+          <NavLink  to="/">Home</NavLink>
           <NavLink to="/#work" onClick={() => setMenuOpen(false)}>Work</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/about">About</NavLink>

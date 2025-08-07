@@ -35,19 +35,19 @@ const Footer: React.FC = () => {
               <Youtube className="h-5 w-5 hover:text-blue-600 transition-colors" />
             </a>
           </div>
-          <p className="text-sm text-zinc-600">Jaipur</p>
-          <p className="text-sm text-zinc-600">Privacy Policy</p>
+          <p className="text-sm font-saonara text-zinc-600">Jaipur</p>
+          <p className="text-sm font-saonara text-zinc-600">Privacy Policy</p>
         </div>
 
         {/* Contact Info */}
         <div className="flex flex-col gap-2 text-sm text-zinc-700 text-center md:text-left">
           <p>
-            <span className="font-semibold">Phone:</span> +91 93529 60101
+            <span className="font-saonara">Phone:</span> +91 93529 60101
           </p>
           <p>
-            <span className="font-semibold">Email:</span> iamapoorv23@gmail.com
+            <span className="font-saonara">Email:</span> iamapoorv23@gmail.com
           </p>
-          <a href="/terms-conditions" className="hover:underline">
+          <a href="/terms-conditions" className="hover:underline font-saonara">
             Terms & Conditions
           </a>
         </div>

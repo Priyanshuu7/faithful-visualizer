@@ -1,7 +1,7 @@
 const VisuallyCraftedStories = () => {
     return (
       <section className="w-full max-w-6xl mx-auto text-center px-4 py-12">
-        <h1 className="font-playfair italic text-2xl md:text-4xl text-foreground mb-4">
+        <h1 className="font-saonara text-2xl md:text-4xl text-foreground mb-4">
           "Films"
         </h1>
   
@@ -16,7 +16,7 @@ const VisuallyCraftedStories = () => {
                 className="w-full h-full"
               ></iframe>
             </div>
-            <span className="mt-2 text-sm font-inter text-foreground/80">Heena & Rahul</span>
+            <span className="mt-2 text-sm font-saonara text-foreground/80">Heena & Rahul</span>
           </div>
   
           <div className="flex flex-col items-center">
@@ -29,7 +29,7 @@ const VisuallyCraftedStories = () => {
                 className="w-full h-full"
               ></iframe>
             </div>
-            <span className="mt-2 text-sm font-inter text-foreground/80">Satvir & Bhavandeep</span>
+            <span className="mt-2 text-sm font-saonara text-foreground/80">Satvir & Bhavandeep</span>
           </div>
   
           <div className="flex flex-col items-center">
@@ -42,7 +42,7 @@ const VisuallyCraftedStories = () => {
                 className="w-full h-full"
               ></iframe>
             </div>
-            <span className="mt-2 text-sm font-inter text-foreground/80">Jyoti & Lovejit</span>
+            <span className="mt-2 text-sm font-saonara text-foreground/80">Jyoti & Lovejit</span>
           </div>
         </div>
       </section>

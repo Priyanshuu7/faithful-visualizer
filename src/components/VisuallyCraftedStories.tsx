@@ -5,10 +5,10 @@ import destinationWedding from "@/assets/destination-wedding.jpg";
 const VisuallyCraftedStories = () => {
   return (
     <section className="w-full max-w-6xl mx-auto text-center px-4 py-12">
-      <h2 className="font-playfair italic text-xl md:text-4xl text-foreground mb-4">
+      <h2 className="font-saonara text-xl md:text-4xl text-foreground mb-4">
         "Visually Crafted Stories That Go Beyond the Frame"
       </h2>
-      <p className="font-inter text-sm md:text-base text-foreground/80 max-w-2xl mx-auto mb-12">
+      <p className="font-saonara text-sm md:text-base text-foreground/80 max-w-2xl mx-auto mb-12">
         "Galaxies Photography is where light meets story  a space where timeless love,
         raw craft, and authentic emotion unfold frame by frame."
       </p>
@@ -21,7 +21,7 @@ const VisuallyCraftedStories = () => {
               className="w-full h-full object-cover grayscale"
             />
           </div>
-          <span className="mt-2 text-sm font-inter text-foreground/80">Heena & Rahul</span>
+          <span className="mt-2 text-sm font-saonara text-foreground/80">Heena & Rahul</span>
         </div>
         <div className="flex flex-col items-center">
           <div className="aspect-[4/5] overflow-hidden w-full">
@@ -31,7 +31,7 @@ const VisuallyCraftedStories = () => {
               className="w-full h-full object-cover grayscale"
             />
           </div>
-          <span className="mt-2 text-sm font-inter text-foreground/80">Satvir & Bhavandeep</span>
+          <span className="mt-2 text-sm font-saonara text-foreground/80">Satvir & Bhavandeep</span>
         </div>
         <div className="flex flex-col items-center">
           <div className="aspect-[4/5] overflow-hidden w-full">
@@ -41,7 +41,7 @@ const VisuallyCraftedStories = () => {
               className="w-full h-full object-cover grayscale"
             />
           </div>
-          <span className="mt-2 text-sm font-inter text-foreground/80">Jyoti & Lovejit</span>
+          <span className="mt-2 text-sm font-saonara text-foreground/80">Jyoti & Lovejit</span>
         </div>
       </div>
     </section>

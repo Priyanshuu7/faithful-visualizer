@@ -37,7 +37,7 @@ const Contact = () => {
         {/* Left: Contact Info */}
         <div className="md:w-1/2 w-full p-8 flex flex-col justify-center bg-white">
           <h2 className="text-3xl md:text-4xl font-saonara mb-4 text-gray-900">Contact us</h2>
-          <p className=" font-saonara text-gray-600 mb-8 text-base md:text-sm max-w-xs">
+          <p className=" font-saonara text-gray-600 mb-8 text-base md:text-xl max-w-xs">
             Please share a few details about your shoot or project below, the more we know, the better we can bring your vision to life.
           </p>
           <ul className="space-y-6 text-gray-700 text-base">
@@ -47,7 +47,7 @@ const Contact = () => {
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="text-[#A52A2A] mt-1 font-saonara" />
-              <span>Redwood Kosmos, Flat 407, <br /> Jaipur 303905</span>
+              <span className="font-saonara">Redwood Kosmos, Flat 407, <br /> Jaipur 303905</span>
             </li>
             <li className="flex items-start gap-3">
               <Phone className="text-[#A52A2A] mt-1 font-saonara" />

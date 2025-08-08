@@ -34,7 +34,7 @@ export const Navbar = () => {
           <NavLink to="/#work" onClick={() => setMenuOpen(false)}>Work</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/#faq">FAQ</NavLink>
+          <NavLink to="/faq">FAQ</NavLink>
         </div>
 
         {/* Mobile Menu Button */}

@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: 'font-saonara';
+  src: url('./assets/fonts/MADE SAONARA PERSONAL USE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-saonara {
+  font-family: 'font-saonara', cursive, sans-serif;
+}

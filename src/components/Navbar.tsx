@@ -56,7 +56,7 @@ export const Navbar = () => {
           <NavLink to="#work" onClick={() => setMenuOpen(false)}>Work</NavLink>
           <NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
           <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
-          <NavLink to="/#faq" onClick={() => setMenuOpen(false)}>FAQ</NavLink>
+          <NavLink to="/faq" onClick={() => setMenuOpen(false)}>FAQ</NavLink>
         </div>
       </div>
     </header>

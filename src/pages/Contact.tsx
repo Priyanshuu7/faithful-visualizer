@@ -27,17 +27,43 @@ const Contact = () => {
   } = useForm<FormValues>();
 
   const onSubmit = async (data: FormValues) => {
-    console.log("Contact form submitted:", data);
-    reset();
+    try {
+      const payload = {
+        access_key: "<YOUR_WEB3FORMS_KEY>", // Your Web3Forms key for testing
+        ...data,
+      };
+
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const json = await res.json();
+
+      if (json.success) {
+        alert("Message sent successfully!");
+        reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submit error:", error);
+      alert("Failed to send message. Please try again later.");
+    }
   };
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-background py-12 px-2 md:px-6">
       <div className="w-full max-w-5xl bg-white rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden border border-gray-200">
+        
         {/* Left: Contact Info */}
         <div className="md:w-1/2 w-full p-8 flex flex-col justify-center bg-white">
           <h2 className="text-3xl md:text-4xl font-saonara mb-4 text-gray-900">Contact us</h2>
-          <p className=" font-saonara text-gray-600 mb-8 text-base md:text-xl max-w-xs">
+          <p className="font-saonara text-gray-600 mb-8 text-base md:text-xl max-w-xs">
             Please share a few details about your shoot or project below, the more we know, the better we can bring your vision to life.
           </p>
           <ul className="space-y-6 text-gray-700 text-base">
@@ -61,13 +87,13 @@ const Contact = () => {
           <Card className="w-full max-w-md shadow-none border-0 bg-[#f7f7f8]">
             <CardContent className="p-0">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                
                 {/* Name */}
                 <div>
                   <Label htmlFor="name" className="mb-1 font-saonara">Name*</Label>
                   <Input
                     id="name"
                     {...register("name", { required: true })}
-                    aria-invalid={!!errors.name}
                   />
                   {errors.name && <p className="text-red-500 text-xs mt-1">Name is required</p>}
                 </div>
@@ -79,7 +105,6 @@ const Contact = () => {
                     id="email"
                     type="email"
                     {...register("email", { required: true })}
-                    aria-invalid={!!errors.email}
                   />
                   {errors.email && <p className="text-red-500 text-xs mt-1">Email is required</p>}
                 </div>
@@ -111,24 +136,22 @@ const Contact = () => {
                     id="type"
                     placeholder="e.g. Wedding, Portrait, Event..."
                     {...register("type", { required: true })}
-                    aria-invalid={!!errors.type}
                   />
-                  {errors.type && <p className="text-red-500 text-xs mt-1">Type of photoshoot is required</p>}
+                  {errors.type && <p className="text-red-500 text-xs mt-1">Type is required</p>}
                 </div>
 
                 {/* Tentative Date */}
                 <div>
-                  <Label htmlFor="date" className="mb-1 font-saonara">Tentative Date of the Photoshoot*</Label>
+                  <Label htmlFor="date" className="mb-1 font-saonara">Tentative Date*</Label>
                   <Input
                     id="date"
                     type="date"
                     {...register("date", { required: true })}
-                    aria-invalid={!!errors.date}
                   />
                   {errors.date && <p className="text-red-500 text-xs mt-1">Date is required</p>}
                 </div>
 
-                {/* Requirements / Message */}
+                {/* Requirements */}
                 <div>
                   <Label htmlFor="requirements" className="mb-1 font-saonara">Tell us about your requirements*</Label>
                   <Textarea
@@ -136,7 +159,6 @@ const Contact = () => {
                     rows={4}
                     placeholder="Share your vision, ideas, or any details..."
                     {...register("requirements", { required: true })}
-                    aria-invalid={!!errors.requirements}
                   />
                   {errors.requirements && <p className="text-red-500 text-xs mt-1">This field is required</p>}
                 </div>
@@ -144,15 +166,17 @@ const Contact = () => {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-[#A52A2A] hover:bg-[#B5651D] text-white font-semibold rounded-md py-2 mt-2 shadow-sm transition-colors focus:ring-2 focus:ring-[#FF6B35] focus:ring-offset-2"
+                  className="w-full bg-[#A52A2A] hover:bg-[#B5651D] text-white font-semibold rounded-md py-2 mt-2 shadow-sm transition-colors"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
+
               </form>
             </CardContent>
           </Card>
         </div>
+
       </div>
     </section>
   );

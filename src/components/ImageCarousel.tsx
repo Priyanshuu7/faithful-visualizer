@@ -6,7 +6,7 @@ import {
     CarouselPrevious,
   } from "@/components/ui/carousel";
   import { cn } from "@/lib/utils";
-  import { Navbar } from "./Navbar"; // Import your navbar component
+  import { Navbar } from "./Navbar"; 
   
   type ImageCarouselProps = {
     images: { src: string; alt?: string }[];
@@ -39,8 +39,12 @@ import {
           </CarouselContent>
   
           {/* Centered navigation buttons */}
-          <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 left-4 z-40 bg-black/50 text-white rounded-full p-3 hover:bg-black/70 transition" />
-          <CarouselNext className="absolute top-1/2 -translate-y-1/2 right-4 z-40 bg-black/50 text-white rounded-full p-3 hover:bg-black/70 transition" />
+          <CarouselPrevious
+            className="absolute left-1/2 -translate-x-[160%] top-[95%] z-40 bg-black/50 text-white rounded-full p-3 hover:bg-black/70 transition"
+          />
+          <CarouselNext
+            className="absolute left-1/2 translate-x-[10%] top-[95%] z-40 bg-black/50 text-white rounded-full p-3 hover:bg-black/70 transition"
+          />
         </Carousel>
       </div>
     );

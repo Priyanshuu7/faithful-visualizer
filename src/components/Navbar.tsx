@@ -1,32 +1,38 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import GalaxiesLogo from "@/assets/GalaxiesLogo.png";
 import { X } from "lucide-react";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { Instagram, Youtube } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile"; // ✅ make sure path is correct
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isMobile = useIsMobile(); // ✅ same breakpoint logic everywhere
 
-  // Lock scroll and avoid layout shift when menu is open
+  // Lock scroll & avoid layout shift — only on desktop
   useEffect(() => {
     if (menuOpen) {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      if (!isMobile) {
+        const scrollbarWidth =
+          window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
       document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
     } else {
       document.body.style.overflow = "auto";
-      document.body.style.paddingRight = "0px";
+      if (!isMobile) {
+        document.body.style.paddingRight = "0px";
+      }
     }
+
     return () => {
       document.body.style.overflow = "auto";
       document.body.style.paddingRight = "0px";
     };
-  }, [menuOpen]);
+  }, [menuOpen, isMobile]);
 
   const openMenu = () => {
     setIsClosing(false);
@@ -48,34 +54,40 @@ export const Navbar = () => {
       }`}
     >
       <nav className="w-full flex items-center justify-between px-6 py-4">
-        {/* Logo */}
-        <img
-          src={GalaxiesLogo}
-          alt="Galaxies Logo"
-          className="w-28 md:w-40 h-auto object-contain rounded-md brightness-75 contrast-150 drop-shadow-md"
-        />
-
-        {/* Desktop NavLinks */}
-        <div className="font-saonara hidden md:flex items-center gap-4">
-          <NavLink to="/" onClick={closeMenu}>Home</NavLink>
-          <NavLink to="/#work" onClick={closeMenu}>Work</NavLink>
-          <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
-          <NavLink to="/about" onClick={closeMenu}>About</NavLink>
-          <NavLink to="/faq" onClick={closeMenu}>FAQ</NavLink>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        {/* Mobile: menu icon + logo */}
+        <div className="flex items-center gap-10 md:hidden">
           <button
             onClick={openMenu}
             className={`${isHomePage ? "text-[#36454F]" : "text-[#36454F]"}`}
           >
             <TwoLineMenuIcon size={28} color="#36454F" />
           </button>
+
+          <img
+            src={GalaxiesLogo}
+            alt="Galaxies Logo"
+            className="w-28 h-auto object-contain rounded-md brightness-75 contrast-150 drop-shadow-md"
+          />
+        </div>
+
+        {/* Desktop: logo */}
+        <img
+          src={GalaxiesLogo}
+          alt="Galaxies Logo"
+          className="hidden md:block w-28 md:w-40 h-auto object-contain rounded-md brightness-75 contrast-150 drop-shadow-md"
+        />
+
+        {/* Desktop NavLinks */}
+        <div className="font-saonara hidden md:flex items-center gap-8">
+          <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+          <NavLink to="/#work" onClick={closeMenu}>Work</NavLink>
+          <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
+          <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+          <NavLink to="/faq" onClick={closeMenu}>FAQ</NavLink>
         </div>
       </nav>
 
-      {/* Overlay (always mounted to avoid layout shift) */}
+      {/* Overlay */}
       <div
         className={`fixed inset-0 bg-background z-[9998] flex flex-col px-6 py-8 transition-opacity duration-500 ${
           menuOpen
@@ -85,8 +97,11 @@ export const Navbar = () => {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        {/* Logo + Close button */}
-        <div className="flex justify-between items-center mb-10">
+        {/* Close button + Logo */}
+        <div className="flex items-center gap-10 mb-10">
+          <button onClick={closeMenu}>
+            <X strokeWidth="1.5" size={32} color="#36454F" />
+          </button>
           <Link to="/" onClick={closeMenu}>
             <img
               src={GalaxiesLogo}
@@ -94,20 +109,25 @@ export const Navbar = () => {
               className="w-28 md:w-40 h-auto object-contain rounded-md brightness-75 contrast-150 drop-shadow-md"
             />
           </Link>
-          <button onClick={closeMenu}>
-            <X strokeWidth="1.5" size={32} color="#36454F" />
-          </button>
         </div>
 
-        {/* Mobile menu links with bottom border */}
+        {/* Mobile menu links */}
         <div className="flex flex-col items-start gap-1 font-saonara border-b border-[#36454F] pb-4 mb-4">
-          <NavLink to="/" onClick={closeMenu} className="text-3xl text-[#36454F]">Home</NavLink>
-          <NavLink to="#work" onClick={closeMenu} className="text-3xl text-[#36454F]">Work</NavLink>
-          <NavLink to="/about" onClick={closeMenu} className="text-3xl text-[#36454F]">About</NavLink>
-          <NavLink to="/contact" onClick={closeMenu} className="text-3xl text-[#36454F]">Contact</NavLink>
+          <NavLink to="/" onClick={closeMenu} className="text-3xl text-[#36454F]">
+            Home
+          </NavLink>
+          <NavLink to="#work" onClick={closeMenu} className="text-3xl text-[#36454F]">
+            Work
+          </NavLink>
+          <NavLink to="/about" onClick={closeMenu} className="text-3xl text-[#36454F]">
+            About
+          </NavLink>
+          <NavLink to="/contact" onClick={closeMenu} className="text-3xl text-[#36454F]">
+            Contact
+          </NavLink>
         </div>
 
-        {/* Social handles icons only */}
+        {/* Social Links */}
         <div className="flex gap-6 mb-4 text-[#36454F]">
           <a
             href="https://instagram.com/yourhandle"
@@ -116,7 +136,7 @@ export const Navbar = () => {
             className="hover:text-gray-600 transition"
             aria-label="Instagram"
           >
-            <span className="font-saonara"  color="#36454F">Instagram</span>
+            <span className="font-saonara">Instagram</span>
           </a>
           <a
             href="https://youtube.com/@yourhandle"
@@ -125,11 +145,11 @@ export const Navbar = () => {
             className="hover:text-gray-600 transition"
             aria-label="YouTube"
           >
-            <span className="font-saonara" color="#36454F">Youtube</span>
-            </a>
+            <span className="font-saonara">Youtube</span>
+          </a>
         </div>
 
-        {/* Get in Touch button centered and shorter */}
+        {/* Get in Touch button */}
         <div className="flex justify-center pt-7">
           <a
             href="/contact"
@@ -144,6 +164,7 @@ export const Navbar = () => {
   );
 };
 
+/* Menu Icon */
 const TwoLineMenuIcon = ({ size = 32, color = "#36454F" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -161,13 +182,14 @@ const TwoLineMenuIcon = ({ size = 32, color = "#36454F" }) => (
   </svg>
 );
 
+/* Nav Link Component */
 const NavLink = ({ to, children, onClick, className = "" }) => {
   const isHash = to.startsWith("#") || to.includes("#");
   const Component = isHash ? HashLink : Link;
 
   return (
     <Component
-      smooth
+      {...(isHash && { smooth: true })}
       to={to}
       onClick={onClick}
       className={`block px-4 py-2 text-[#36454F] font-saonara hover:text-gray-500 transition ${className}`}

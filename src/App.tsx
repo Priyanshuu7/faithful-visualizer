@@ -15,6 +15,7 @@ import FAQ from "./pages/FAQ";
 import Footer from "@/components/Footer";
 import { Navbar } from "./components/Navbar";
 
+
 const queryClient = new QueryClient();
 
 function Layout() {

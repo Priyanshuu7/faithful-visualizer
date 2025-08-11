@@ -2,7 +2,7 @@ const VisuallyCraftedStories = () => {
     return (
         <section className="w-full mx-auto text-center items-center px-4 py-3 md:py-12">
             <h1 className=" libertinus-sans-regular text-2xl md:text-4xl text-foreground mb-2 md:mb-4">
-                "Films"
+                Films
             </h1>
             <br/>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">

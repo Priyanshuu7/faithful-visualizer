@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             className="w-44 h-auto object-contain rounded-md"
           />
           <p className="text-sm text-zinc-600 font-light tracking-wide italic text-center md:text-left">
-            “Capturing timeless love stories in Jaipur & beyond.”
+            Capturing timeless love stories in Jaipur & beyond.
           </p>
         </div>
 

@@ -94,7 +94,7 @@ const Contact = () => {
                 
                 {/* Name */}
                 <div>
-                  <Label htmlFor="name" className="mb-1 font-saonara text-[#36454F]">
+                  <Label htmlFor="name" className="mb-1 libertinus-sans-regular text-[#36454F]">
                     Name*
                   </Label>
                   <Input
@@ -108,7 +108,7 @@ const Contact = () => {
 
                 {/* Email */}
                 <div>
-                  <Label htmlFor="email" className="mb-1 font-saonara text-[#36454F]">
+                  <Label htmlFor="email" className="mb-1 libertinus-sans-regular text-[#36454F]">
                     Email*
                   </Label>
                   <Input

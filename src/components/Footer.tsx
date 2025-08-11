@@ -41,7 +41,7 @@ const Footer : React.FC = () => {
     </a>
   </div>
 
-  {/* Jaipur below Instagram/YouTube, centered on mobile, left on md+ */}
+ 
   <p className="text-sm font-saonara text-zinc-700 self-center md:self-start text-center md:text-left">
     Jaipur, India
   </p>

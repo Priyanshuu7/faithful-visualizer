@@ -1,7 +1,7 @@
 const VisuallyCraftedStories = () => {
     return (
         <section className="w-full mx-auto text-center items-center px-4 py-3 md:py-12">
-            <h1 className=" libertinus-sans-regular text-2xl md:text-4xl text-foreground mb-2 md:mb-4">
+            <h1 className=" libertinus-sans-regular text-2xl md:text-4xl text-[#36454F]/80  mb-2 md:mb-4">
                 Films
             </h1>
             <br/>

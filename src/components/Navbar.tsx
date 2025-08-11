@@ -12,7 +12,6 @@ export const Navbar = () => {
   const isHomePage = location.pathname === "/";
   const isMobile = useIsMobile();
 
-  // Lock scroll & avoid layout shift — only on mobile
   useEffect(() => {
     if (menuOpen && isMobile) {
       document.body.style.overflow = "hidden";
@@ -20,7 +19,6 @@ export const Navbar = () => {
       document.body.style.overflow = "auto";
       document.body.style.paddingRight = "0px";
     }
-
     return () => {
       document.body.style.overflow = "auto";
       document.body.style.paddingRight = "0px";
@@ -37,13 +35,14 @@ export const Navbar = () => {
     setTimeout(() => {
       setMenuOpen(false);
       setIsClosing(false);
-    }, 500); // match fadeOut duration
+    }, 500);
   };
 
   return (
     <header
-      className={`w-full z-[9999] ${isHomePage ? "absolute top-0 left-0 bg-transparent" : "relative"
-        }`}
+      className={`w-full z-[9999] ${
+        isHomePage ? "absolute top-0 left-0 bg-transparent" : "relative"
+      }`}
     >
       <nav className="w-full flex items-center justify-between px-6 py-4">
         {/* Mobile: menu icon + logo */}
@@ -66,10 +65,10 @@ export const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="w-8" /> {/* Spacer to balance layout */}
+          <div className="w-8" />
         </div>
 
-        {/* Desktop: logo */}
+        {/* Desktop Nav */}
         <Link to="/" onClick={closeMenu}>
           <img
             src={GalaxiesLogo}
@@ -78,8 +77,7 @@ export const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop NavLinks */}
-        <div className="font-saonara hidden md:flex items-center gap-6">
+        <div className=" libertinus-sans-regular hidden md:flex items-center gap-6">
           <NavLink to="/" onClick={closeMenu}>
             Home
           </NavLink>
@@ -101,10 +99,11 @@ export const Navbar = () => {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div
-          className={`fixed inset-0 bg-background z-[9998] transition-opacity duration-500 ${isClosing ? "opacity-0 pointer-events-none" : "opacity-100"
-            } md:hidden flex flex-col h-full`}
+          className={`fixed inset-0 bg-background z-[9998] transition-opacity duration-500 ${
+            isClosing ? "opacity-0 pointer-events-none" : "opacity-100"
+          } md:hidden flex flex-col h-full`}
         >
-          {/* Fixed Header for Close Button and Logo */}
+          {/* Mobile menu header */}
           <div className="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-background z-[9999]">
             <button
               onClick={closeMenu}
@@ -122,15 +121,15 @@ export const Navbar = () => {
                 />
               </Link>
             </div>
-            <div className="w-8" /> {/* Spacer to balance layout */}
+            <div className="w-8" />
           </div>
 
-          {/* Mobile Menu Content */}
+          {/* Mobile menu content */}
           <div className="flex flex-col flex-1 px-8 mt-20">
-            {/* Mobile Menu Links */}
             <div
-              className={`flex flex-col items-start gap-1 font-saonara pb-4 ${isClosing ? "animate-slideOutDown" : "animate-slideInUp"
-                }`}
+              className={`flex flex-col items-start gap-1  libertinus-sans-regular pb-4 ${
+                isClosing ? "animate-slideOutDown" : "animate-slideInUp"
+              }`}
             >
               <NavLink to="/" onClick={closeMenu} className="text-3xl text-[#36454F]">
                 Home
@@ -154,8 +153,8 @@ export const Navbar = () => {
               </NavLink>
             </div>
 
-            {/* Social Links */}
-            <div className="border-t border-[#36454F] pt-4 flex gap-6 text-[#36454F]">
+            {/* Social links */}
+            <div className="border-t border-[#36454F] pt-4 flex gap-6 text-[#36454F]  libertinus-sans-regular">
               <a
                 href="https://instagram.com/yourhandle"
                 target="_blank"
@@ -163,7 +162,7 @@ export const Navbar = () => {
                 className="hover:text-gray-600 transition"
                 aria-label="Instagram"
               >
-                <span className="font-saonara">Instagram</span>
+                Instagram
               </a>
               <a
                 href="https://youtube.com/@yourhandle"
@@ -172,19 +171,20 @@ export const Navbar = () => {
                 className="hover:text-gray-600 transition"
                 aria-label="YouTube"
               >
-                <span className="font-saonara">Youtube</span>
+                Youtube
               </a>
             </div>
 
-            {/* Get in Touch Button */}
+            {/* Get in Touch */}
             <div
-              className={`mt-auto pb-8 flex items-center justify-center ${isClosing ? "animate-slideOutDown" : "animate-slideInUp"
-                }`}
+              className={`mt-auto pb-8 flex items-center justify-center ${
+                isClosing ? "animate-slideOutDown" : "animate-slideInUp"
+              }`}
             >
               <a
                 href="/contact"
                 onClick={closeMenu}
-                className="inline-block px-4 py-2 bg-[#36454F] text-white font-saonara rounded-md hover:bg-[#2B3742] transition w-40 text-center"
+                className="inline-block px-4 py-2 bg-[#36454F] text-white  libertinus-sans-regular rounded-md hover:bg-[#2B3742] transition w-40 text-center"
               >
                 Get in Touch
               </a>
@@ -196,7 +196,6 @@ export const Navbar = () => {
   );
 };
 
-/* Menu Icon */
 const TwoLineMenuIcon = ({ size = 32, color = "#36454F" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +213,6 @@ const TwoLineMenuIcon = ({ size = 32, color = "#36454F" }) => (
   </svg>
 );
 
-/* Nav Link Component */
 const NavLink = ({ to, children, onClick, className = "" }) => {
   const isHash = to.startsWith("#") || to.includes("#");
   const Component = isHash ? HashLink : Link;
@@ -224,7 +222,7 @@ const NavLink = ({ to, children, onClick, className = "" }) => {
       {...(isHash && { smooth: true })}
       to={to}
       onClick={onClick}
-      className={`block px-4 py-2 text-[#36454F] font-saonara hover:text-gray-500 transition ${className}`}
+      className={`block px-4 py-2 text-[#36454F]  libertinus-sans-regular hover:text-gray-500 transition ${className}`}
     >
       {children}
     </Component>

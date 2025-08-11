@@ -1,7 +1,7 @@
 const VisuallyCraftedStories = () => {
     return (
         <section className="w-full mx-auto text-center items-center px-4 py-3 md:py-12">
-            <h1 className="font-saonara text-2xl md:text-4xl text-foreground mb-2 md:mb-4">
+            <h1 className=" libertinus-sans-regular text-2xl md:text-4xl text-foreground mb-2 md:mb-4">
                 "Films"
             </h1>
             <br/>
@@ -13,7 +13,7 @@ const VisuallyCraftedStories = () => {
                         }} // keeps proportions but no big padding gap
                         ></iframe>
                     </div>
-                    <span className="mt-1 text-l font-saonara  font-bold ">
+                    <span className="mt-1 text-l  text-[#36454F]/80 libertinus-sans-regular font-bold ">
                         Heena & Rahul
                     </span>
                 </div>
@@ -30,7 +30,7 @@ const VisuallyCraftedStories = () => {
                             aspectRatio: "16 / 9"
                         }}></iframe>
                     </div>
-                    <span className="mt-1 text-l font-saonara font-bold">
+                    <span className="mt-1 text-l  text-[#36454F]/80 libertinus-sans-regular font-bold">
                         Satvir & Bhavandeep
                     </span>
                 </div>

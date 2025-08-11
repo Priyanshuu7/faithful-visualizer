@@ -57,30 +57,30 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background py-12 px-2 md:px-6">
+    <section className=" libertinus-sans-regular min-h-screen flex items-center justify-center bg-background py-12 px-2 md:px-6">
       <div className="w-full max-w-5xl bg-white rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden border border-gray-200">
         
         {/* Left: Contact Info */}
         <div className="md:w-1/2 w-full p-8 flex flex-col justify-center bg-white">
-          <h2 className="text-3xl md:text-4xl font-saonara mb-4 text-[#36454F]">
+          <h2 className="text-3xl md:text-4xl  mb-4 text-[#36454F]">
             Contact us
           </h2>
-          <p className="font-saonara text-base md:text-xl max-w-xs mb-8 leading-relaxed text-[#36454F]">
+          <p className=" text-base md:text-xl max-w-xs mb-8 leading-relaxed text-[#36454F]">
             Please share a few details about your shoot or project below, the more we know, the better we can bring your vision to life.
           </p>
           <ul className="space-y-6 text-base text-[#36454F]">
             <li className="flex items-start gap-3">
-              <Mail className="text-[#A52A2A] mt-1" />
-              <span className="break-all font-saonara">iamapoorv23@gmail.com</span>
+              <Mail className="text-[#36454F] mt-1" />
+              <span className="break-all ">iamapoorv23@gmail.com</span>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin className="text-[#A52A2A] mt-1 font-saonara" />
-              <span className="font-saonara">
+              <MapPin className="text-[#36454F] mt-1 " />
+              <span className="">
                 Redwood Kosmos, Flat 407, <br /> Jaipur 303905
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <Phone className="text-[#A52A2A] mt-1 font-saonara" />
+              <Phone className="text-[#36454F] mt-1 " />
               <span>+91 93529 60101</span>
             </li>
           </ul>
@@ -123,7 +123,7 @@ const Contact = () => {
 
                 {/* Phone */}
                 <div>
-                  <Label htmlFor="phone" className="mb-1 font-saonara text-[#36454F]">
+                  <Label htmlFor="phone" className="mb-1  text-[#36454F]">
                     Phone
                   </Label>
                   <Input id="phone" type="tel" {...register("phone")} />
@@ -131,7 +131,7 @@ const Contact = () => {
 
                 {/* WhatsApp */}
                 <div>
-                  <Label htmlFor="whatsapp" className="mb-1 font-saonara text-[#36454F]">
+                  <Label htmlFor="whatsapp" className="mb-1  text-[#36454F]">
                     WhatsApp (optional)
                   </Label>
                   <Input id="whatsapp" type="tel" {...register("whatsapp")} />
@@ -139,7 +139,7 @@ const Contact = () => {
 
                 {/* Type of Photoshoot */}
                 <div>
-                  <Label htmlFor="type" className="mb-1 font-saonara text-[#36454F]">
+                  <Label htmlFor="type" className="mb-1  text-[#36454F]">
                     Type of Photoshoot*
                   </Label>
                   <Input
@@ -154,7 +154,7 @@ const Contact = () => {
 
                 {/* Tentative Date */}
                 <div>
-                  <Label htmlFor="date" className="mb-1 font-saonara text-[#36454F]">
+                  <Label htmlFor="date" className="mb-1  text-[#36454F]">
                     Tentative Date*
                   </Label>
                   <Input
@@ -171,7 +171,7 @@ const Contact = () => {
                 <div>
                   <Label
                     htmlFor="requirements"
-                    className="mb-1 font-saonara text-[#36454F]"
+                    className="mb-1  text-[#36454F]"
                   >
                     Tell us about your requirements*
                   </Label>
@@ -189,7 +189,7 @@ const Contact = () => {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-[#A52A2A] hover:bg-[#B5651D] text-white font-semibold rounded-md py-2 mt-2 shadow-sm transition-colors"
+                  className="w-full bg-[#36454F]  text-white font-semibold rounded-md py-2 mt-2 shadow-sm transition-colors"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}

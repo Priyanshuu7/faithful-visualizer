@@ -15,17 +15,17 @@ export const Navbar = () => {
   // Lock scroll & avoid layout shift — only on desktop
   useEffect(() => {
     if (menuOpen) {
+      document.body.style.overflow = "hidden";
       if (!isMobile) {
         const scrollbarWidth =
           window.innerWidth - document.documentElement.clientWidth;
         document.body.style.paddingRight = `${scrollbarWidth}px`;
-      }
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-      if (!isMobile) {
+      } else {
         document.body.style.paddingRight = "0px";
       }
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px";
     }
 
     return () => {
@@ -89,7 +89,7 @@ export const Navbar = () => {
 
       {/* Overlay */}
       <div
-        className={`fixed inset-0 bg-background z-[9998] flex flex-col px-6 py-8 transition-opacity duration-500 ${
+        className={`fixed top-0 left-0 inset-0 bg-background z-[9998] flex flex-col px-6 py-8 transition-opacity duration-500 ${
           menuOpen
             ? isClosing
               ? "opacity-0 pointer-events-none"

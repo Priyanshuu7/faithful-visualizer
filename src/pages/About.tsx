@@ -36,10 +36,10 @@ const About = () => {
           Let Galaxies Photography and Film Productions bring your story to life through visuals that communicate your narrative and create lasting memories.
         </p>
         <div className="flex gap-8 font-inter text-base md:text-lg text-[#36454F] mt-8">
-          <a href="https://www.instagram.com/galaxiesphotography" className="hover:underline">
+          <a href="https://www.instagram.com/galaxiesphotography" className="hover:underline libertinus-sans-regular ">
             Instagram
           </a>
-          <a href="mailto:iamapoorv23@gmail.com" className="hover:underline">
+          <a href="mailto:iamapoorv23@gmail.com" className="hover:underline libertinus-sans-regular">
             Mail
           </a>
         </div>

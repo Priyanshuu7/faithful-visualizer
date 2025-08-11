@@ -19,35 +19,33 @@ const Footer : React.FC = () => {
                         “Capturing timeless love stories in Jaipur & beyond.”
                     </p>
                 </div>
-                {/* Socials + Info */}
-                <div className="flex flex-col items-center gap-2 md:items-start">
-                    <div
-                        className="flex space-x-6 self-center md:self-start md:flex-row flex-col md:space-x-6 space-y-2 md:space-y-0">
-                        <a
-                            href="https://www.instagram.com/galaxiesphotography"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Instagram"
-                            className="text-sm font-saonara text-zinc-700 hover:text-pink-500 transition-colors flex items-center justify-center space-x-1">
-                            <span>Instagram</span>
-                        </a>
+          <div className="flex flex-col items-center gap-2 md:items-start">
+  <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-6">
+    <a
+      href="https://www.instagram.com/galaxiesphotography"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+      className="text-sm font-saonara text-zinc-700 hover:text-pink-500 transition-colors flex items-center justify-center space-x-1"
+    >
+      <span>Instagram</span>
+    </a>
+    <a
+      href="https://youtube.com/@galaxiesphotography?si=ZjK0CKEiO5f9kz0j"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YouTube"
+      className="text-sm font-saonara text-zinc-700 hover:text-pink-500 transition-colors flex items-center justify-center space-x-1"
+    >
+      <span>Youtube</span>
+    </a>
+  </div>
 
-                        <a
-                            href="https://youtube.com/@galaxiesphotography?si=ZjK0CKEiO5f9kz0j"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="YouTube"
-                            className="text-sm font-saonara text-zinc-700 hover:text-pink-500 transition-colors flex items-center justify-center space-x-1">
-                            <span>Youtube</span>
-                        </a>
-                    </div>
-
-                    {/* Jaipur below Instagram/YouTube, centered on mobile, left on md+ */}
-                    <p
-                        className="text-sm font-saonara text-zinc-700 self-center md:self-start text-center md:text-left">
-                        Jaipur, India
-                    </p>
-                </div>
+  {/* Jaipur below Instagram/YouTube, centered on mobile, left on md+ */}
+  <p className="text-sm font-saonara text-zinc-700 self-center md:self-start text-center md:text-left">
+    Jaipur, India
+  </p>
+</div>
 
                 {/* Contact Info */}
                 <div

@@ -4,8 +4,7 @@ import GalaxiesLogo from "@/assets/GalaxiesLogo.png";
 
 const Footer : React.FC = () => {
     return (
-        <footer
-            className="w-full bg-gradient-to-b from-white to-pink-50 border-t ">
+        <footer className="w-full bg-background">
             <div
                 className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-12">
 
@@ -14,40 +13,40 @@ const Footer : React.FC = () => {
                     <img
                         src={GalaxiesLogo}
                         alt="Galaxies Logo"
-                        className="w-44 h-auto object-contain rounded-md "/>
+                        className="w-44 h-auto object-contain rounded-md"/>
                     <p
                         className="text-sm text-zinc-600 font-light tracking-wide italic text-center md:text-left">
                         “Capturing timeless love stories in Jaipur & beyond.”
                     </p>
                 </div>
-
                 {/* Socials + Info */}
-                <div
-                    className="flex flex-col items-center gap-6 text-center md:text-left md:items-start">
-                    <div className="flex space-x-5">
+                <div className="flex flex-col items-center gap-2 md:items-start">
+                    <div
+                        className="flex space-x-6 self-center md:self-start md:flex-row flex-col md:space-x-6 space-y-2 md:space-y-0">
                         <a
                             href="https://www.instagram.com/galaxiesphotography"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Instagram"
-                            className="p-3 bg-white rounded-full shadow hover:shadow-lg transition-all duration-300 hover:scale-105">
-                            <Instagram className="h-6 w-6 text-pink-500"/>
+                            className="text-sm font-saonara text-zinc-700 hover:text-pink-500 transition-colors flex items-center justify-center space-x-1">
+                            <span>Instagram</span>
                         </a>
+
                         <a
                             href="https://youtube.com/@galaxiesphotography?si=ZjK0CKEiO5f9kz0j"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="YouTube"
-                            className="p-3 bg-white rounded-full shadow hover:shadow-lg transition-all duration-300 hover:scale-105">
-                            <Youtube className="h-6 w-6 text-red-500"/>
+                            className="text-sm font-saonara text-zinc-700 hover:text-pink-500 transition-colors flex items-center justify-center space-x-1">
+                            <span>Youtube</span>
                         </a>
                     </div>
-                    <p className="text-sm font-saonara text-zinc-700">📍 Jaipur, India</p>
-                    <a
-                        href="/privacy-policy"
-                        className="text-sm font-saonara text-zinc-700 hover:text-pink-500 transition-colors">
-                        Privacy Policy
-                    </a>
+
+                    {/* Jaipur below Instagram/YouTube, centered on mobile, left on md+ */}
+                    <p
+                        className="text-sm font-saonara text-zinc-700 self-center md:self-start text-center md:text-left">
+                        Jaipur, India
+                    </p>
                 </div>
 
                 {/* Contact Info */}

@@ -4,6 +4,8 @@ import GalaxiesLogo from "@/assets/GalaxiesLogo.png";
 import { X } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
 import { useIsMobile } from "@/hooks/use-mobile";
+import Galaxies from "@/assets/Galaxies.png";
+
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,8 +47,17 @@ export const Navbar = () => {
       }`}
     >
       <nav className="w-full flex items-center justify-between px-6 py-4">
-        {/* Mobile: menu icon + logo */}
+        {/* Mobile: logo + menu icon */}
         <div className="flex items-center justify-between w-full md:hidden">
+          <div className="flex justify-center flex-1">
+            <Link to="/" onClick={closeMenu}>
+              <img
+                src={GalaxiesLogo}
+                alt="Galaxies Logo"
+                className="w-28 h-auto object-contain rounded-md brightness-50 contrast-150 drop-shadow-md"
+              />
+            </Link>
+          </div>
           <button
             onClick={openMenu}
             className="text-[#36454F] w-8"
@@ -55,17 +66,6 @@ export const Navbar = () => {
           >
             <TwoLineMenuIcon size={28} color="#36454F" />
           </button>
-
-          <div className="flex justify-center">
-            <Link to="/" onClick={closeMenu}>
-              <img
-                src={GalaxiesLogo}
-                alt="Galaxies Logo"
-                className="w-28 h-auto object-contain rounded-md brightness-75 contrast-150 drop-shadow-md"
-              />
-            </Link>
-          </div>
-          <div className="w-8" />
         </div>
 
         {/* Desktop Nav */}
@@ -73,11 +73,11 @@ export const Navbar = () => {
           <img
             src={GalaxiesLogo}
             alt="Galaxies Logo"
-            className="hidden md:block w-28 md:w-40 h-auto object-contain rounded-md brightness-75 contrast-150 drop-shadow-md"
+            className="hidden md:block w-28 md:w-40 h-auto object-contain rounded-md brightness-50 contrast-150 drop-shadow-md"
           />
         </Link>
 
-        <div className=" libertinus-sans-regular hidden md:flex items-center gap-6">
+        <div className="libertinus-sans-regular hidden md:flex items-center gap-6">
           <NavLink to="/" onClick={closeMenu}>
             Home
           </NavLink>
@@ -105,6 +105,15 @@ export const Navbar = () => {
         >
           {/* Mobile menu header */}
           <div className="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-background z-[9999]">
+            <div className="flex justify-center flex-1">
+              <Link to="/" onClick={closeMenu}>
+                <img
+                  src={GalaxiesLogo}
+                  alt="Galaxies Logo"
+                  className="w-28 h-auto object-contain rounded-md brightness-50 contrast-150 drop-shadow-md"
+                />
+              </Link>
+            </div>
             <button
               onClick={closeMenu}
               aria-label="Close navigation menu"
@@ -112,22 +121,12 @@ export const Navbar = () => {
             >
               <X strokeWidth="1.5" size={32} color="#36454F" />
             </button>
-            <div className="flex justify-center">
-              <Link to="/" onClick={closeMenu}>
-                <img
-                  src={GalaxiesLogo}
-                  alt="Galaxies Logo"
-                  className="w-28 h-auto object-contain rounded-md brightness-75 contrast-150 drop-shadow-md"
-                />
-              </Link>
-            </div>
-            <div className="w-8" />
           </div>
 
           {/* Mobile menu content */}
           <div className="flex flex-col flex-1 px-8 mt-20">
             <div
-              className={`flex flex-col items-start gap-1  libertinus-sans-regular pb-4 ${
+              className={`flex flex-col items-start gap-1 libertinus-sans-regular pb-4 ${
                 isClosing ? "animate-slideOutDown" : "animate-slideInUp"
               }`}
             >
@@ -154,7 +153,7 @@ export const Navbar = () => {
             </div>
 
             {/* Social links */}
-            <div className="border-t border-[#36454F] pt-4 flex gap-6 text-[#36454F]  libertinus-sans-regular">
+            <div className="border-t border-[#36454F] pt-4 flex gap-6 text-[#36454F] libertinus-sans-regular">
               <a
                 href="https://instagram.com/yourhandle"
                 target="_blank"
@@ -184,7 +183,7 @@ export const Navbar = () => {
               <a
                 href="/contact"
                 onClick={closeMenu}
-                className="inline-block px-4 py-2 bg-[#36454F] text-white  libertinus-sans-regular rounded-md hover:bg-[#2B3742] transition w-40 text-center"
+                className="inline-block px-4 py-2 bg-[#36454F] text-white libertinus-sans-regular rounded-md hover:bg-[#2B3742] transition w-40 text-center"
               >
                 Get in Touch
               </a>
@@ -222,7 +221,7 @@ const NavLink = ({ to, children, onClick, className = "" }) => {
       {...(isHash && { smooth: true })}
       to={to}
       onClick={onClick}
-      className={`block px-4 py-2 text-[#36454F]  libertinus-sans-regular hover:text-gray-500 transition ${className}`}
+      className={`block px-4 py-2 text-[#36454F] libertinus-sans-regular hover:text-gray-500 transition ${className}`}
     >
       {children}
     </Component>

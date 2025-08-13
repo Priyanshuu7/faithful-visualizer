@@ -5,9 +5,9 @@ const FAQ = () => (
     <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#36454F] leading-tight">
       Frequently Asked Questions
     </h1>
-    <div className="space-y-8 text-lg md:text-2xl text-[#506270] mb-6 leading-relaxed">
+    <div className="space-y-8 text-lg md:text-xl text-[#506270] mb-6 leading-relaxed">
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           When is the final payment due?
         </h2>
         <p>
@@ -15,7 +15,7 @@ const FAQ = () => (
         </p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           Is my deposit refundable if I cancel?
         </h2>
         <p>
@@ -23,7 +23,7 @@ const FAQ = () => (
         </p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           Can I reschedule my shoot later?
         </h2>
         <p>
@@ -31,7 +31,7 @@ const FAQ = () => (
         </p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           Can I reduce or change my selected package later?
         </h2>
         <p>
@@ -39,7 +39,7 @@ const FAQ = () => (
         </p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           Are travel and permissions included in the cost?
         </h2>
         <p>
@@ -47,7 +47,7 @@ const FAQ = () => (
         </p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           When will I get the final photos and video?
         </h2>
         <ul className="list-disc ml-6 text-[#506270]">
@@ -57,25 +57,25 @@ const FAQ = () => (
         </ul>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           What happens if a location is unexpectedly shut or too crowded?
         </h2>
         <p>We’ll work around it creatively, but it won’t affect the agreed fees.</p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           Can I request additional edits or services later?
         </h2>
         <p>Yes. Additional requests are welcomed but will incur extra charges as discussed.</p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           Do you help with photo selection?
         </h2>
         <p>Yes! We can guide you if needed. Once RAW files are shared, take your time with your selections.</p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           How long do you retain our data?
         </h2>
         <p>
@@ -83,7 +83,7 @@ const FAQ = () => (
         </p>
       </div>
       <div>
-        <h2 className="font-semibold text-xl mb-1 text-[#36454F] leading-tight">
+        <h2 className="font-semibold text-xl md:text-xl mb-1 text-[#36454F] leading-tight">
           Do you offer any revisions on the edited photos or video?
         </h2>
         <p>Yes, we do offer limited revisions to ensure you’re happy with the final output.</p>

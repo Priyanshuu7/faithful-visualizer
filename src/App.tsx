@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import TermsConditions from "./pages/TermsConditions";
 import FAQ from "./pages/FAQ";
+import Photography from "./pages/Photography";
 
 
 import Footer from "@/components/Footer";
@@ -43,6 +44,8 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
+            <Route path="/photography/:id" element={<Photography />} />
+
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

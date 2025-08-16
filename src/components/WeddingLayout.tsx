@@ -28,7 +28,7 @@ const WeddingLayout = () => {
     return (
         <div className="bg-background">
             <ImageCarousel images={images}/>
-            <div className="max-w-7xl mx-auto relative pt-8 pb-8 md:pt-16 md:pb-16">
+            <div className="max-w-8xl mx-auto relative pt-8 pb-8 md:pt-16 md:pb-16">
                 <VisuallyCraftedStories/>
                 <ImageCollage/>
                 <WeddingVideos/>
